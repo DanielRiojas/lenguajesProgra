@@ -17,14 +17,14 @@ public class Buffer {
         
         if(this.buffer == 0) {
             try {
-                wait(1000);
+                wait();
             } catch (InterruptedException ex) {
                 Logger.getLogger(Buffer.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         product = this.buffer;
         this.buffer = 0;
-        notify();
+        notifyAll();
         
         return product;
     }
@@ -32,20 +32,13 @@ public class Buffer {
     synchronized void produce(char product) {
         if(this.buffer != 0) {
             try {
-                wait(1000);
+                wait();
             } catch (InterruptedException ex) {
                 Logger.getLogger(Buffer.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         this.buffer = product;
         
-        notify();
+        notifyAll();
     }
-    
-    static int count = 1;
-    synchronized static void print(String string) {
-        System.out.print(count++ + " ");
-        System.out.println(string);
-    }
-    
 }

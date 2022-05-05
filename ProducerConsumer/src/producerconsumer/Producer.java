@@ -22,8 +22,7 @@ public class Producer extends Thread {
         for(int i=0 ; i<5 ; i++) {
             product = products.charAt(r.nextInt(5));
             this.buffer.produce(product);
-            //System.out.println("Producer produced: " + product);
-            Buffer.print("Producer produced: " + product);
+            System.out.println("Producer produced: " + product);
             
             try {
                 Thread.sleep(1000);
