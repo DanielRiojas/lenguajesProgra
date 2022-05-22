@@ -14,12 +14,25 @@ public class Consumer extends Thread {
     @Override
     public void run() {
         System.out.println("Running Consumer...");
-        char product;
+        Scheme product;
         
         for(int i=0 ; i<5 ; i++) {
             product = this.buffer.consume();
             //System.out.println("Consumer consumed: " + product);
-            Buffer.print("Consumer consumed: " + product);
+            int result = 0;
+            if(product.getSymbol() == '+'){
+                result = product.getNum1() + product.getNum2();
+            }
+            else if(product.getSymbol() == '*'){
+                result = product.getNum1() * product.getNum2();
+            }
+            else if(product.getSymbol() == '/'){
+                result = product.getNum1() / product.getNum2();
+            }
+            else if(product.getSymbol() == '-'){
+                result = product.getNum1() - product.getNum2();
+            }
+            System.out.println("Consumer consumed: " + result);
             
             try {
                 Thread.sleep(1000);
