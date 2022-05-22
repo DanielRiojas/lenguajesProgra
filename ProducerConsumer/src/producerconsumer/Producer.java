@@ -7,7 +7,8 @@ import java.util.logging.Logger;
 
 public class Producer extends Thread {
     Buffer buffer;
-    
+    Scheme scheme;
+
     Producer(Buffer buffer) {
         this.buffer = buffer;
     }
@@ -15,14 +16,19 @@ public class Producer extends Thread {
     @Override
     public void run() {
         System.out.println("Running Producer...");
-        String products = "AEIOU";
+        String symbols = "+-/*";
         Random r = new Random(System.currentTimeMillis());
-        char product;
+        Scheme product = new Scheme();
+    
         
         for(int i=0 ; i<5 ; i++) {
-            product = products.charAt(r.nextInt(5));
-            this.buffer.produce(product);
-            System.out.println("Producer produced: " + product);
+            product.setSymbol(symbols.charAt(r.nextInt(5)));
+            product.setNum1(r.nextInt(10));
+            product.setNum2(r.nextInt(10));
+            this.buffer.produce(product.getSymbol());
+            this.buffer.produce((char)product.getNum1());
+            this.buffer.produce((char)product.getNum2());
+            System.out.println("Producer produced: " + product.getSymbol() + " " + product.getNum1() + " " + product.getNum2());
             
             try {
                 Thread.sleep(1000);
