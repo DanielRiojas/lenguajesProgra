@@ -6,16 +6,16 @@ import java.util.logging.Logger;
 
 public class Buffer {
     
-    private char buffer;
+    private Scheme buffer = new Scheme();
     
     Buffer() {
-        this.buffer = 0;
+        this.buffer.setSymbol('f');
     }
     
-    synchronized char consume() {
-        char product = 0;
+    synchronized Scheme consume() {
+        Scheme product = new Scheme();
         
-        if(this.buffer == 0) {
+        if(this.buffer.getSymbol() == 'f') {
             try {
                 wait();
             } catch (InterruptedException ex) {
@@ -23,14 +23,14 @@ public class Buffer {
             }
         }
         product = this.buffer;
-        this.buffer = 0;
+        this.buffer.setSymbol('f');
         notifyAll();
         
         return product;
     }
     
-    synchronized void produce(char product) {
-        if(this.buffer != 0) {
+    synchronized void produce(Scheme product) {
+        if(this.buffer.getSymbol() != 'f') {
             try {
                 wait();
             } catch (InterruptedException ex) {

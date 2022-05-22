@@ -18,7 +18,8 @@ public class Consumer extends Thread {
         
         for(int i=0 ; i<5 ; i++) {
             product = this.buffer.consume();
-            System.out.println("Consumer consumed: " + product);
+            //System.out.println("Consumer consumed: " + product);
+            Buffer.print("Consumer consumed: " + product);
             
             try {
                 Thread.sleep(1000);
