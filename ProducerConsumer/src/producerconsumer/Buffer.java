@@ -9,7 +9,7 @@ public class Buffer {
     private Scheme buffer = new Scheme();
 
     Buffer() {
-        this.buffer.setFlag(0);;
+        this.buffer.setFlag(0);
     }
 
     synchronized Scheme consume() {

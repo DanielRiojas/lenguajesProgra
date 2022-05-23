@@ -7,10 +7,18 @@ import java.util.logging.Logger;
 public class Producer extends Thread {
     Buffer buffer;
     int id;
+    int n;
+    int m;
+    int pesp;
+    int tambuf;
 
-    Producer(Buffer buffer, int id) {
+    Producer(Buffer buffer, int id, int n, int m, int tambuf, int pesp) {
         this.buffer = buffer;
         this.id = id;
+        this.n = n;
+        this.m = m;
+        this.tambuf = tambuf;
+        this.pesp = pesp;
     }
 
     public int getRandomNumber(int min, int max) {
@@ -25,11 +33,9 @@ public class Producer extends Thread {
         Scheme product = new Scheme();
 
         // @TODO cambiar n y m a datos de GUIFrame
-        int n = 0;
-        int m = 9;
 
         // @TODO Cambiar 5 por tamaño del buffer
-        for(int i=0 ; i < 5 ; i++) {
+        for(int i=0 ; i < tambuf ; i++) {
             product.setSymbol(symbols.charAt(r.nextInt(4)));
             product.setNum1(r.nextInt(m - n) + n);
             product.setNum2(r.nextInt(m - n) + n);
@@ -39,7 +45,7 @@ public class Producer extends Thread {
 
             //@TODO cambiar 1000 por timepo de espera de GUI
             try {
-                Thread.sleep(1000);
+                Thread.sleep(pesp);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Producer.class.getName()).log(Level.SEVERE, null, ex);
             }
