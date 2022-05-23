@@ -22,12 +22,14 @@ public class Consumer extends Thread {
     public void run() {
         System.out.println("Running Consumer...");
         Scheme product;
+        String sy = "";
 
         // @Cambiar 5 por tamaño del buffer
         for(int i=0 ; i < tambuf ; i++) {
             product = this.buffer.consume();
 
             int result = 0;
+            sy += "( " + product.getSymbol() + " " + product.getNum1() + " " + product.getNum2() + " )";
             if(product.getSymbol() == '+'){
                 result = product.getNum1() + product.getNum2();
             }
@@ -48,6 +50,9 @@ public class Consumer extends Thread {
                 result = product.getNum1() - product.getNum2();
             }
             System.out.println("Consumer consumed: " + result + " ID: " + id);
+            producerconsumer.GUIFrame.model2.addRow(new Object[]{id, sy, result} );
+            //producerconsumer.GUIFrame.model.removeRow(0);
+            
 
             //@TODO cambiar 1000 por timepo de espera de GUI
             try {

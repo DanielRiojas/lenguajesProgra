@@ -186,17 +186,14 @@ public class GUIFrame extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
-                "#", "ID", "Solution"
+                "ID", "Operation", "Solution"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false
@@ -211,6 +208,14 @@ public class GUIFrame extends javax.swing.JFrame {
             }
         });
         TareasRealizadas.setViewportView(jTable2);
+        if (jTable2.getColumnModel().getColumnCount() > 0) {
+            jTable2.getColumnModel().getColumn(0).setMinWidth(50);
+            jTable2.getColumnModel().getColumn(0).setPreferredWidth(50);
+            jTable2.getColumnModel().getColumn(0).setMaxWidth(50);
+            jTable2.getColumnModel().getColumn(1).setMinWidth(70);
+            jTable2.getColumnModel().getColumn(1).setPreferredWidth(50);
+            jTable2.getColumnModel().getColumn(1).setMaxWidth(70);
+        }
 
         jLabel7.setText("Tareas por hacer");
 
