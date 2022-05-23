@@ -4,6 +4,7 @@ package producerconsumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
 public class Consumer extends Thread {
     Buffer buffer;
     
@@ -14,12 +15,29 @@ public class Consumer extends Thread {
     @Override
     public void run() {
         System.out.println("Running Consumer...");
-        char product;
-        
-        for(int i=0 ; i<5 ; i++) {
+        Scheme product;
+
+        for(int i=0 ; i < 5 ; i++) {
             product = this.buffer.consume();
-            //System.out.println("Consumer consumed: " + product);
-            Buffer.print("Consumer consumed: " + product);
+            
+            int result = 0;
+            if(product.getSymbol() == '+'){
+                result = product.getNum1() + product.getNum2();
+            }
+            else if(product.getSymbol() == '*'){
+                result = product.getNum1() * product.getNum2();
+            }
+            else if(product.getSymbol() == '/'){
+                if (product.getNum2() == 0) {
+                    result = 0;
+                } else {
+                    result = product.getNum1() / product.getNum2();
+                }
+            }
+            else if(product.getSymbol() == '-'){
+                result = product.getNum1() - product.getNum2();
+            }
+            System.out.println("Consumer consumed: " + result);
             
             try {
                 Thread.sleep(1000);

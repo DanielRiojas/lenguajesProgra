@@ -13,11 +13,11 @@ public class Buffer {
     }
     
     synchronized Scheme consume() {
-        Scheme product = new Scheme();
+        Scheme product;
         
-        if(this.buffer.getSymbol() == 'f') {
+        while(this.buffer.getSymbol() == 'f') {
             try {
-                wait();
+                wait(500);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Buffer.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -30,9 +30,9 @@ public class Buffer {
     }
     
     synchronized void produce(Scheme product) {
-        if(this.buffer.getSymbol() != 'f') {
+        while(this.buffer.getSymbol() != 'f') {
             try {
-                wait();
+                wait(500);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Buffer.class.getName()).log(Level.SEVERE, null, ex);
             }
