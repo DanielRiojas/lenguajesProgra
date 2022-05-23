@@ -5,17 +5,17 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Buffer {
-    
-    private char buffer;
-    
+
+    private Scheme buffer = new Scheme();
+
     Buffer() {
-        this.buffer = 0;
+        this.buffer.setFlag(0);
     }
-    
-    synchronized char consume() {
-        char product = 0;
-        
-        if(this.buffer == 0) {
+
+    synchronized Scheme consume() {
+        Scheme product = new Scheme();
+
+        while(this.buffer.getFlag() == 0) {
             try {
                 wait(1000);
             } catch (InterruptedException ex) {
@@ -23,14 +23,14 @@ public class Buffer {
             }
         }
         product = this.buffer;
-        this.buffer = 0;
-        notify();
-        
+        this.buffer.setFlag(0);
+        notifyAll();
+
         return product;
     }
-    
-    synchronized void produce(char product) {
-        if(this.buffer != 0) {
+
+    synchronized void produce(Scheme product) {
+        while(this.buffer.getFlag() != 0) {
             try {
                 wait(1000);
             } catch (InterruptedException ex) {
@@ -38,14 +38,7 @@ public class Buffer {
             }
         }
         this.buffer = product;
-        
-        notify();
+
+        notifyAll();
     }
-    
-    static int count = 1;
-    synchronized static void print(String string) {
-        System.out.print(count++ + " ");
-        System.out.println(string);
-    }
-    
 }

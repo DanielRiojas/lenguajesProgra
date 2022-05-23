@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jTabbedPane1" max="32767" attributes="0"/>
+                  <Component id="Iniciar" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jTabbedPane1" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="Iniciar" min="-2" pref="48" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Configuraci&#xf3;n">
+                <Property name="tabTitle" type="java.lang.String" value="Configuraci&#xf3;n"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="j" alignment="0" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="j" alignment="0" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="j">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="errorLabel" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="ConsumidoresCant" max="32767" attributes="0"/>
+                                      <Component id="ProductoresCant" max="32767" attributes="0"/>
+                                      <Component id="jLabel4" pref="86" max="32767" attributes="0"/>
+                                      <Component id="TamBuffer" max="32767" attributes="0"/>
+                                      <Component id="RangeN" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jLabel5" max="32767" attributes="0"/>
+                                      <Component id="ProductoresEspera" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="ConsumidoresEspera" max="32767" attributes="0"/>
+                                      <Component id="RangeM" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="349" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                  <Component id="ProductoresCant" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ProductoresEspera" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ConsumidoresCant" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ConsumidoresEspera" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="TamBuffer" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="RangeM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="RangeN" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="39" max="32767" attributes="0"/>
+                          <Component id="errorLabel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel5">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tiempo de Espera (ms)"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel6">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Rango de Valores (n, m)"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JSpinner" name="RangeM">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="0" maximum="10" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="javax.swing.JSpinner.DefaultEditor editor7 = ( javax.swing.JSpinner.DefaultEditor ) RangeM.getEditor();&#xa;editor7.getTextField().setEnabled( true );&#xa;editor7.getTextField().setEditable( false );"/>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Productores"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Consumidores"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JSpinner" name="ProductoresCant">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="1" maximum="10" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                    </Property>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Default Cursor"/>
+                    </Property>
+                    <Property name="editor" type="javax.swing.JComponent" editor="org.netbeans.modules.form.editors.SpinnerEditorEditor">
+                      <SpinnerEditor format="" type="3"/>
+                    </Property>
+                    <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="1" type="code"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="javax.swing.JSpinner.DefaultEditor editor = ( javax.swing.JSpinner.DefaultEditor ) ProductoresCant.getEditor();&#xa;editor.getTextField().setEnabled( true );&#xa;editor.getTextField().setEditable( false );"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JSpinner()"/>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JSpinner" name="ConsumidoresCant">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="1" maximum="10" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="javax.swing.JSpinner.DefaultEditor editor2 = ( javax.swing.JSpinner.DefaultEditor ) ConsumidoresCant.getEditor();&#xa;editor2.getTextField().setEnabled( true );&#xa;editor2.getTextField().setEditable( false );"/>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tama&#xf1;o del Buffer"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel4">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cantidad"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JSpinner" name="ProductoresEspera">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="0" maximum="10000" minimum="0" numberType="java.lang.Integer" stepSize="1000" type="number"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="javax.swing.JSpinner.DefaultEditor editor3 = ( javax.swing.JSpinner.DefaultEditor ) ProductoresEspera.getEditor();&#xa;editor3.getTextField().setEnabled( true );&#xa;editor3.getTextField().setEditable( false );"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JSpinner" name="ConsumidoresEspera">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="0" maximum="10000" minimum="0" numberType="java.lang.Integer" stepSize="1000" type="number"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="javax.swing.JSpinner.DefaultEditor editor4 = ( javax.swing.JSpinner.DefaultEditor ) ConsumidoresEspera.getEditor();&#xa;editor4.getTextField().setEnabled( true );&#xa;editor4.getTextField().setEditable( false );"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JSpinner" name="TamBuffer">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="1" maximum="100" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="javax.swing.JSpinner.DefaultEditor editor5 = ( javax.swing.JSpinner.DefaultEditor ) TamBuffer.getEditor();&#xa;editor5.getTextField().setEnabled( true );&#xa;editor5.getTextField().setEditable( false );"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JSpinner" name="RangeN">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="0" maximum="9" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="javax.swing.JSpinner.DefaultEditor editor6 = ( javax.swing.JSpinner.DefaultEditor ) RangeN.getEditor();&#xa;editor6.getTextField().setEnabled( true );&#xa;editor6.getTextField().setEditable( false );"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="errorLabel">
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel3">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Procesos">
+                <Property name="tabTitle" type="java.lang.String" value="Procesos"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel7" alignment="0" min="-2" pref="185" max="-2" attributes="0"/>
+                          <Component id="TareasPorHacer" min="-2" pref="325" max="-2" attributes="0"/>
+                          <Component id="jProgressBar1" alignment="0" min="-2" pref="325" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="41" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="TareasRealizadas" min="-2" pref="325" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="STOPbtn" alignment="0" min="-2" pref="325" max="-2" attributes="0"/>
+                                  <Component id="jLabel8" alignment="0" min="-2" pref="185" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="TareasRealizadas" pref="165" max="32767" attributes="0"/>
+                          <Component id="TareasPorHacer" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jProgressBar1" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="STOPbtn" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="TareasPorHacer">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="jTable1">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="2" rowCount="0">
+                        <Column editable="false" title="ID" type="java.lang.Integer"/>
+                        <Column editable="false" title="Problem" type="java.lang.String"/>
+                      </Table>
+                    </Property>
+                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                      <TableColumnModel selectionModel="0">
+                        <Column maxWidth="100" minWidth="50" prefWidth="50" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                      </TableColumnModel>
+                    </Property>
+                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JScrollPane" name="TareasRealizadas">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="jTable2">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="3" rowCount="0">
+                        <Column editable="false" title="ID" type="java.lang.Integer"/>
+                        <Column editable="false" title="Operation" type="java.lang.String"/>
+                        <Column editable="false" title="Solution" type="java.lang.Integer"/>
+                      </Table>
+                    </Property>
+                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                      <TableColumnModel selectionModel="0">
+                        <Column maxWidth="50" minWidth="50" prefWidth="50" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="120" minWidth="120" prefWidth="100" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                      </TableColumnModel>
+                    </Property>
+                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="jLabel7">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Tareas por hacer"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel8">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Tareas realizadas"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JProgressBar" name="jProgressBar1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="33" red="33" type="rgb"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="STOPbtn">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="STOP"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="STOPbtnActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="Iniciar">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Courier New" size="24" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="INICIAR"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IniciarActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
