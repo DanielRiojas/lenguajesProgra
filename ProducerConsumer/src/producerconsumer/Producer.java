@@ -31,6 +31,7 @@ public class Producer extends Thread {
         String symbols = "+-/*";
         Random r = new Random(System.currentTimeMillis() + id);
         Scheme product = new Scheme();
+        
 
         // @TODO cambiar n y m a datos de GUIFrame
 
@@ -42,6 +43,8 @@ public class Producer extends Thread {
             product.setFlag(1);
             this.buffer.produce(product);
             System.out.println("Producer produced: " + "(" + product.getSymbol() + " " + product.getNum1() + " " + product.getNum2() + ") ID: " + id);
+            producerconsumer.GUIFrame.model.addRow(new Object[]{id,  "(" + product.getSymbol() + " " + product.getNum1() + " " + product.getNum2() + ")"} );
+            
 
             //@TODO cambiar 1000 por timepo de espera de GUI
             try {

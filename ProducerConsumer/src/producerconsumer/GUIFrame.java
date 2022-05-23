@@ -3,6 +3,7 @@ package producerconsumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static javafx.application.Platform.exit;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,13 +15,18 @@ import static javafx.application.Platform.exit;
  *
  * @author sdegante
  */
+
 public class GUIFrame extends javax.swing.JFrame {
+    static public DefaultTableModel model;
+    static public DefaultTableModel model2;
 
     /**
      * Creates new form GUIFrame
      */
     public GUIFrame() {
         initComponents();
+        model = (DefaultTableModel) jTable1.getModel();
+        model2 = (DefaultTableModel) jTable2.getModel();
     }
 
     /**
@@ -102,7 +108,7 @@ public class GUIFrame extends javax.swing.JFrame {
                             .addComponent(ProductoresEspera)
                             .addComponent(ConsumidoresEspera)
                             .addComponent(RangeM))))
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(349, Short.MAX_VALUE))
         );
         jLayout.setVerticalGroup(
             jLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,24 +156,33 @@ public class GUIFrame extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
-                "#", "ID", "Problem"
+                "ID", "Problem"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
         TareasPorHacer.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setMinWidth(50);
+            jTable1.getColumnModel().getColumn(0).setPreferredWidth(50);
+            jTable1.getColumnModel().getColumn(0).setMaxWidth(100);
+        }
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -290,6 +305,8 @@ public class GUIFrame extends javax.swing.JFrame {
            errorLabel.setText("");
            pc.run(args);
        }
+       
+      //model.insertRow(model.getRowCount(), new Object[]{1, "Hola"} );
     }//GEN-LAST:event_IniciarActionPerformed
 
     private void STOPbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_STOPbtnActionPerformed
