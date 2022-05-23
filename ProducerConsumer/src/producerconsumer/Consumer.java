@@ -4,6 +4,7 @@ package producerconsumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
 public class Consumer extends Thread {
     Buffer buffer;
     
@@ -15,10 +16,10 @@ public class Consumer extends Thread {
     public void run() {
         System.out.println("Running Consumer...");
         Scheme product;
-        
-        for(int i=0 ; i<5 ; i++) {
+
+        for(int i=0 ; i < 5 ; i++) {
             product = this.buffer.consume();
-            //System.out.println("Consumer consumed: " + product);
+            
             int result = 0;
             if(product.getSymbol() == '+'){
                 result = product.getNum1() + product.getNum2();
