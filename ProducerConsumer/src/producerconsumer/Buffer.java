@@ -9,28 +9,28 @@ public class Buffer {
     private Scheme buffer = new Scheme();
     
     Buffer() {
-        this.buffer.setSymbol('f');
+        this.buffer.setFlag(0);;
     }
     
     synchronized Scheme consume() {
         Scheme product = new Scheme();
-        
-        if(this.buffer.getSymbol() == 'f') {
+
+        while(this.buffer.getFlag() == 0) {
             try {
-                wait();
+                wait(1000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Buffer.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         product = this.buffer;
-        this.buffer.setSymbol('f');
+        this.buffer.setFlag(0);
         notifyAll();
         
         return product;
     }
     
     synchronized void produce(Scheme product) {
-        if(this.buffer.getSymbol() != 'f') {
+        while(this.buffer.getFlag() != 0) {
             try {
                 wait();
             } catch (InterruptedException ex) {
