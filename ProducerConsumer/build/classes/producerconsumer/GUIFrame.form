@@ -161,7 +161,13 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="RangeM">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="0" maximum="10" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                    </Property>
+                  </Properties>
                   <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="javax.swing.JSpinner.DefaultEditor editor7 = ( javax.swing.JSpinner.DefaultEditor ) RangeM.getEditor();&#xa;editor7.getTextField().setEnabled( true );&#xa;editor7.getTextField().setEditable( false );"/>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
                   </AuxValues>
                 </Component>
@@ -176,12 +182,34 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="ProductoresCant">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="1" maximum="10" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                    </Property>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Default Cursor"/>
+                    </Property>
+                    <Property name="editor" type="javax.swing.JComponent" editor="org.netbeans.modules.form.editors.SpinnerEditorEditor">
+                      <SpinnerEditor format="" type="3"/>
+                    </Property>
+                    <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="1" type="code"/>
+                    </Property>
+                  </Properties>
                   <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="javax.swing.JSpinner.DefaultEditor editor = ( javax.swing.JSpinner.DefaultEditor ) ProductoresCant.getEditor();&#xa;editor.getTextField().setEnabled( true );&#xa;editor.getTextField().setEditable( false );"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JSpinner()"/>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
                   </AuxValues>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="ConsumidoresCant">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="1" maximum="10" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                    </Property>
+                  </Properties>
                   <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="javax.swing.JSpinner.DefaultEditor editor2 = ( javax.swing.JSpinner.DefaultEditor ) ConsumidoresCant.getEditor();&#xa;editor2.getTextField().setEnabled( true );&#xa;editor2.getTextField().setEditable( false );"/>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
                   </AuxValues>
                 </Component>
@@ -196,12 +224,44 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="ProductoresEspera">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="0" maximum="10000" minimum="0" numberType="java.lang.Integer" stepSize="1000" type="number"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="javax.swing.JSpinner.DefaultEditor editor3 = ( javax.swing.JSpinner.DefaultEditor ) ProductoresEspera.getEditor();&#xa;editor3.getTextField().setEnabled( true );&#xa;editor3.getTextField().setEditable( false );"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="ConsumidoresEspera">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="0" maximum="10000" minimum="0" numberType="java.lang.Integer" stepSize="1000" type="number"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="javax.swing.JSpinner.DefaultEditor editor4 = ( javax.swing.JSpinner.DefaultEditor ) ConsumidoresEspera.getEditor();&#xa;editor4.getTextField().setEnabled( true );&#xa;editor4.getTextField().setEditable( false );"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="TamBuffer">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="1" maximum="100" minimum="1" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="javax.swing.JSpinner.DefaultEditor editor5 = ( javax.swing.JSpinner.DefaultEditor ) TamBuffer.getEditor();&#xa;editor5.getTextField().setEnabled( true );&#xa;editor5.getTextField().setEditable( false );"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="RangeN">
+                  <Properties>
+                    <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+                      <SpinnerModel initial="0" maximum="9" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="javax.swing.JSpinner.DefaultEditor editor6 = ( javax.swing.JSpinner.DefaultEditor ) RangeN.getEditor();&#xa;editor6.getTextField().setEnabled( true );&#xa;editor6.getTextField().setEditable( false );"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="errorLabel">
                 </Component>
@@ -228,11 +288,19 @@
                           <Component id="TareasPorHacer" min="-2" pref="325" max="-2" attributes="0"/>
                           <Component id="jProgressBar1" alignment="0" min="-2" pref="325" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="67" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="STOPbtn" alignment="1" max="32767" attributes="0"/>
-                          <Component id="jLabel8" alignment="1" min="-2" pref="185" max="-2" attributes="0"/>
-                          <Component id="TareasRealizadas" alignment="1" pref="325" max="32767" attributes="0"/>
+                      <EmptySpace pref="41" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="TareasRealizadas" min="-2" pref="325" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="STOPbtn" alignment="0" min="-2" pref="325" max="-2" attributes="0"/>
+                                  <Component id="jLabel8" alignment="0" min="-2" pref="185" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
@@ -313,7 +381,7 @@
                           <Editor/>
                           <Renderer/>
                         </Column>
-                        <Column maxWidth="70" minWidth="70" prefWidth="50" resizable="true">
+                        <Column maxWidth="120" minWidth="120" prefWidth="100" resizable="true">
                           <Title/>
                           <Editor/>
                           <Renderer/>

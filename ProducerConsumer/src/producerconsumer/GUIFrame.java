@@ -73,13 +73,30 @@ public class GUIFrame extends javax.swing.JFrame {
 
         jLabel6.setText("Rango de Valores (n, m)");
 
+        RangeM.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+
         jLabel1.setText("Productores");
 
         jLabel2.setText("Consumidores");
 
+        ProductoresCant.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
+        ProductoresCant.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        ProductoresCant.setEditor(new javax.swing.JSpinner.NumberEditor(ProductoresCant, ""));
+        ProductoresCant.setValue(1);
+
+        ConsumidoresCant.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
+
         jLabel3.setText("Tamaño del Buffer");
 
         jLabel4.setText("Cantidad");
+
+        ProductoresEspera.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10000, 1000));
+
+        ConsumidoresEspera.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10000, 1000));
+
+        TamBuffer.setModel(new javax.swing.SpinnerNumberModel(1, 1, 100, 1));
+
+        RangeN.setModel(new javax.swing.SpinnerNumberModel(0, 0, 9, 1));
 
         javax.swing.GroupLayout jLayout = new javax.swing.GroupLayout(j);
         j.setLayout(jLayout);
@@ -140,6 +157,28 @@ public class GUIFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(errorLabel))
         );
+
+        javax.swing.JSpinner.DefaultEditor editor7 = ( javax.swing.JSpinner.DefaultEditor ) RangeM.getEditor();
+        editor7.getTextField().setEnabled( true );
+        editor7.getTextField().setEditable( false );
+        javax.swing.JSpinner.DefaultEditor editor = ( javax.swing.JSpinner.DefaultEditor ) ProductoresCant.getEditor();
+        editor.getTextField().setEnabled( true );
+        editor.getTextField().setEditable( false );
+        javax.swing.JSpinner.DefaultEditor editor2 = ( javax.swing.JSpinner.DefaultEditor ) ConsumidoresCant.getEditor();
+        editor2.getTextField().setEnabled( true );
+        editor2.getTextField().setEditable( false );
+        javax.swing.JSpinner.DefaultEditor editor3 = ( javax.swing.JSpinner.DefaultEditor ) ProductoresEspera.getEditor();
+        editor3.getTextField().setEnabled( true );
+        editor3.getTextField().setEditable( false );
+        javax.swing.JSpinner.DefaultEditor editor4 = ( javax.swing.JSpinner.DefaultEditor ) ConsumidoresEspera.getEditor();
+        editor4.getTextField().setEnabled( true );
+        editor4.getTextField().setEditable( false );
+        javax.swing.JSpinner.DefaultEditor editor5 = ( javax.swing.JSpinner.DefaultEditor ) TamBuffer.getEditor();
+        editor5.getTextField().setEnabled( true );
+        editor5.getTextField().setEditable( false );
+        javax.swing.JSpinner.DefaultEditor editor6 = ( javax.swing.JSpinner.DefaultEditor ) RangeN.getEditor();
+        editor6.getTextField().setEnabled( true );
+        editor6.getTextField().setEditable( false );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -212,9 +251,9 @@ public class GUIFrame extends javax.swing.JFrame {
             jTable2.getColumnModel().getColumn(0).setMinWidth(50);
             jTable2.getColumnModel().getColumn(0).setPreferredWidth(50);
             jTable2.getColumnModel().getColumn(0).setMaxWidth(50);
-            jTable2.getColumnModel().getColumn(1).setMinWidth(70);
-            jTable2.getColumnModel().getColumn(1).setPreferredWidth(50);
-            jTable2.getColumnModel().getColumn(1).setMaxWidth(70);
+            jTable2.getColumnModel().getColumn(1).setMinWidth(120);
+            jTable2.getColumnModel().getColumn(1).setPreferredWidth(100);
+            jTable2.getColumnModel().getColumn(1).setMaxWidth(120);
         }
 
         jLabel7.setText("Tareas por hacer");
@@ -240,11 +279,16 @@ public class GUIFrame extends javax.swing.JFrame {
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TareasPorHacer, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(STOPbtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TareasRealizadas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(TareasRealizadas, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(STOPbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
