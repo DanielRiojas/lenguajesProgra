@@ -15,7 +15,7 @@ public class Buffer {
     synchronized Scheme consume() {
         Scheme product = new Scheme();
 
-        while(this.buffer.getFlag() == 0) {
+        if(this.buffer.getFlag() == 0) {
             try {
                 wait(1000);
             } catch (InterruptedException ex) {
@@ -30,9 +30,9 @@ public class Buffer {
     }
     
     synchronized void produce(Scheme product) {
-        while(this.buffer.getFlag() != 0) {
+        if(this.buffer.getFlag() != 0) {
             try {
-                wait();
+                wait(1000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Buffer.class.getName()).log(Level.SEVERE, null, ex);
             }
