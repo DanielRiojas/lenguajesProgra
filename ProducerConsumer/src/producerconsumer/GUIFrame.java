@@ -344,6 +344,7 @@ public class GUIFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void IniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IniciarActionPerformed
+       Iniciar.setEnabled(false);
        ProducerConsumer pc = new ProducerConsumer();
        String[] args = {ProductoresCant.getValue().toString(), ConsumidoresCant.getValue().toString(), ProductoresEspera.getValue().toString(),
             ConsumidoresEspera.getValue().toString(), TamBuffer.getValue().toString(), RangeN.getValue().toString(), RangeM.getValue().toString()};
@@ -360,7 +361,9 @@ public class GUIFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_IniciarActionPerformed
 
     private void STOPbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_STOPbtnActionPerformed
-        exit();
+        model.getDataVector().removeAllElements();
+        model2.getDataVector().removeAllElements();
+        Iniciar.setEnabled(true);
     }//GEN-LAST:event_STOPbtnActionPerformed
 
     /**
