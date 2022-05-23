@@ -10,12 +10,20 @@ public class ProducerConsumer {
         //String uniqueID = UUID.randomUUID().toString();
         
         Buffer buffer = new Buffer();
+    
+        // @TODO cambiar 5 por cantidadProductores
+        for (int i = 0; i < 5; i++){
+            Producer producer = new Producer(buffer,i);
+            producer.start();
+        }
+
+        // @TODO cambiar 5 por cantidadConsumidores
+        for (int i = 0; i < 5; i++){
+            Consumer consumer = new Consumer(buffer, i);
+            consumer.start();
+        }
         
-        Producer producer = new Producer(buffer);
-        producer.start();
-        
-        Consumer consumer = new Consumer(buffer);
-        consumer.start();
+
     }
     
 }

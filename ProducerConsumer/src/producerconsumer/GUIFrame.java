@@ -147,7 +147,7 @@ public class GUIFrame extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID Consumidor", "ID Tarea", "Solución", "Contador"
             }
         ));
         TareasPorHacer.setViewportView(jTable1);
@@ -160,7 +160,7 @@ public class GUIFrame extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID Consumidor", "ID Tarea", "Solución", "Contador"
             }
         ));
         TareasRealizadas.setViewportView(jTable2);
@@ -261,6 +261,7 @@ public class GUIFrame extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
