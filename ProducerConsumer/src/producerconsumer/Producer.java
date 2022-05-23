@@ -44,6 +44,7 @@ public class Producer extends Thread {
             this.buffer.produce(product);
             System.out.println("Producer produced: " + "(" + product.getSymbol() + " " + product.getNum1() + " " + product.getNum2() + ") ID: " + id);
             producerconsumer.GUIFrame.model.addRow(new Object[]{id,  "(" + product.getSymbol() + " " + product.getNum1() + " " + product.getNum2() + ")"} );
+            producerconsumer.GUIFrame.jProgressBar1.setValue(producerconsumer.GUIFrame.jProgressBar1.getValue() + (100 / tambuf) );
             
 
             //@TODO cambiar 1000 por timepo de espera de GUI

@@ -260,7 +260,8 @@ public class GUIFrame extends javax.swing.JFrame {
 
         jLabel8.setText("Tareas realizadas");
 
-        jProgressBar1.setValue(50);
+        jProgressBar1.setBackground(new java.awt.Color(255, 255, 255));
+        jProgressBar1.setForeground(new java.awt.Color(51, 51, 255));
 
         STOPbtn.setText("STOP");
         STOPbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -423,7 +424,7 @@ public class GUIFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JProgressBar jProgressBar1;
+    public static javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;

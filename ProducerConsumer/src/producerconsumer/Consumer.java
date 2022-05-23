@@ -51,7 +51,8 @@ public class Consumer extends Thread {
             }
             System.out.println("Consumer consumed: " + result + " ID: " + id);
             producerconsumer.GUIFrame.model2.addRow(new Object[]{id, sy, result} );
-            if(producerconsumer.GUIFrame.model.getRowCount() > 0)
+            producerconsumer.GUIFrame.jProgressBar1.setValue(producerconsumer.GUIFrame.jProgressBar1.getValue() - (100 / tambuf) );
+            if(producerconsumer.GUIFrame.model.getRowCount() >= 0)
                 producerconsumer.GUIFrame.model.removeRow(0);
             
 
